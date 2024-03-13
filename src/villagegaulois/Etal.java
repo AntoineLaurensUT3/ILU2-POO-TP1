@@ -27,6 +27,9 @@ public class Etal {
 
 	public String libererEtal() {
 		etalOccupe = false;
+		try {
+			
+		
 		StringBuilder chaine = new StringBuilder(
 				"Le vendeur " + vendeur.getNom() + " quitte son Etal, ");
 		int produitVendu = quantiteDebutMarche - quantite;
@@ -37,6 +40,12 @@ public class Etal {
 			chaine.append("il n'a malheureusement rien vendu.\n");
 		}
 		return chaine.toString();
+		
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	public String afficherEtal() {
